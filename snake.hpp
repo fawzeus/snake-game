@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cmath>
 #include "CONDTANTS.hpp"
+#include "food.hpp"
 using namespace std;
 
 enum class Direction {
@@ -34,5 +35,7 @@ public:
     void move();
     void draw(sf::RenderWindow &window);
     void set_direction(Direction dir);
+    void check_food_eat(Food &f);
+    bool check_for_death();
 };
 #endif

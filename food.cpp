@@ -2,6 +2,7 @@
 
 Food::Food(int size,int value,sf::Color color):size(size),value(value),color(color){
     change_position();
+    cout<<"FOOD ("<<x<<","<<y<<")"<<endl;
 }
 void Food::draw(sf::RenderWindow &window){
     sf::CircleShape shape(size);
@@ -11,9 +12,14 @@ void Food::draw(sf::RenderWindow &window){
 }
 void Food::change_position(){
     srand(time(0));
-    x = (rand()%(WIDTH/SNAKE_SIZE));
-    x = max(0,x-1)*SNAKE_SIZE+ceil(1.0*SNAKE_SIZE/2);
+    x = (rand()%(WIDTH/SNAKE_SIZE))*SNAKE_SIZE;
     srand(time(0));
-    y = (rand()%(HEIGHT/SNAKE_SIZE));
-    y= max(0,y-1)*SNAKE_SIZE+ceil(1.0/SNAKE_SIZE/2);
+    y = (rand()%(HEIGHT/SNAKE_SIZE))*SNAKE_SIZE;
+}
+
+int Food::get_x()const{
+    return x;
+}
+int Food::get_y()const{
+    return y;
 }

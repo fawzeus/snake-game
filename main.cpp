@@ -4,6 +4,16 @@
 #include <unistd.h>
 using namespace std;
 
+void draw_points(sf::RenderWindow &window){
+    sf::CircleShape shape(5);
+    for(int i = 0;i<WIDTH/11;i++){
+        for(int j=0;j<HEIGHT/11;j++){
+            shape.setPosition(i*SNAKE_SIZE,j*SNAKE_SIZE);
+            window.draw(shape);
+        }
+    }
+}
+
 int main(){
 
     Food f;
@@ -43,13 +53,15 @@ int main(){
         }
         s.set_direction(current_dir);
         s.move();
-        
+        if(s.check_for_death()) break;
+        s.check_food_eat(f);
         // Draw the game objects
         window.clear();
+        //draw_points(window);
         f.draw(window);
         s.draw(window);
         window.display();
-        usleep(500000);
+        usleep(100000);
         
     }
     return 0;

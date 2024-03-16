@@ -18,6 +18,8 @@ class Food {
         Food(int size = 5,int value=1,sf::Color color=sf::Color::Red);
         void draw(sf::RenderWindow &window);
         void change_position();
+        int get_x()const;
+        int get_y()const;
 
 
 };
