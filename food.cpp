@@ -2,7 +2,7 @@
 
 Food::Food(int size,int value,sf::Color color):size(size),value(value),color(color){
     change_position();
-    cout<<"FOOD ("<<x<<","<<y<<")"<<endl;
+    //cout<<"FOOD ("<<x<<","<<y<<")"<<endl;
 }
 void Food::draw(sf::RenderWindow &window){
     sf::CircleShape shape(size);

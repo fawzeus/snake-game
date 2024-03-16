@@ -37,5 +37,6 @@ public:
     void set_direction(Direction dir);
     void check_food_eat(Food &f);
     bool check_for_death();
+    int get_score();
 };
 #endif

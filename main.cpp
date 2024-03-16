@@ -18,6 +18,7 @@ int main(){
 
     Food f;
     Snake s;
+    //the direction of snake
     Direction current_dir = Direction::RIGHT;
     sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT),"Snake Game");
     while(window.isOpen()){
@@ -58,10 +59,10 @@ int main(){
         // Draw the game objects
         window.clear();
         //draw_points(window);
-        f.draw(window);
         s.draw(window);
+        f.draw(window);
         window.display();
-        usleep(100000);
+        usleep(10000);
         
     }
     return 0;
