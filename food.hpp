@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 #include<cmath>
-#include "CONDTANTS.hpp"
+#include "CONSTANTS.hpp"
 
 using namespace std;
 

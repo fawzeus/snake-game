@@ -6,7 +6,7 @@
 #include <utility>
 #include <iostream>
 #include <cmath>
-#include "CONDTANTS.hpp"
+#include "CONSTANTS.hpp"
 #include "food.hpp"
 using namespace std;
 
